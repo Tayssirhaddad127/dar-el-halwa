@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <h1>Commander_Dar El Halwaa</h1> 
+      <header>
+            <h1>Patisserie fine tunisienne depuis 1900</h1>
+            <figure>
+                  <img  src="image/Patisserie.jpg" alt="Vitrine garnie de magnardises,cornes de gazelle et makrouds">
+                  <figcaption>Notre vitrine de mignardises traditionnelles.</figcaption>
+            </figure>
+      </header>   
+      <nav id="sommaire">
+            <h2>Sommaire</h2>
+            <ul>
+                  <li><a href="#apropos">A propos</a></li>
+                  <li><a href="#produits">Nos produits</a></li>
+                  <li><a href="#services">Nos services</a></li>
+                  <li><a href="carte.html">Carte</a></li>
+                  <li><a href="commande.html">commande</a></li>
+                  <li><a href="#contact">Contact</a></li>
+            </ul> 
+      </nav>
+      <main>
+            <h2>Commander un gateau personnalisé</h2>
+            <form action="traitement.php" method="post">
+                        <fieldset>
+                                    <legend>Vos coordonnées</legend>
+                                    <label for="nom">Nom:</label>
+                                    <input type="text" id="nom" name="nom" required minlength="2"> <br>
+                                    <label for="prenom">Prenom:</label>
+                                    <input type="text" id="prenom" name="prenom" required minlength="2"> <br>
+                                    <label for="adrelec">Adresse électronique</label>
+                                    <input type="email" id="adrelec" name="adr" required > <br>
+                                    <p>
+                                                <label for="telephone">Téléphone:</label>
+                                                <input type="tel" id="telephone" name="telephone" pattern="\+216[0-9]{8}" title="+216 suivi de 8 chiffres" placeholder="+21622550211" required > <br>
+                                    </p>
+                                    <p>
+                                                <label for="code">Code Postal:</label>
+                                                <input type="text" id="code" name="code" required maxlength="4" > <br>
+                                    </p>
+                                    
+                                    <label for="adrliv">Adresse de livraison:</label>
+                                    <textarea name="adrliv" id="adrliv" cols="40" rows="3" required></textarea> <br>
+                                    <label for="liste">Gouvernorat:</label>
+                                    <select name="liste" id="liste">
+                                                <option value="Sfax" selected>Sfax</option>
+                                                <option value="Tunis">Tunis</option>
+                                                <option value="Sousse">Sousse</option>
+                                                <option value="Gabès">Gabès</option>
+                                    </select> <br>
+                                    <label for="decors[]">Languages de décoration:</label>
+                                    <select  multiple size="4" name="decors" id="decors[]">
+                                                <option value="fleurs">Fleurs en pate à sucre</option>
+                                                <option value="fruits">Fruits frais</option>
+                                    </select> <br>
+                                    <label for="precisions">Précisions</label>
+                                    <textarea name="precisions" id="precisions" cols="40" rows="4" maxlength="200"></textarea> <br>
+                        </fieldset>
+                        <fieldset>
+                                    <legend>Votre gateau</legend>
+                                    <fieldset>
+                                                <legend>Occasion:</legend>
+                                                <label for="occ-anniv">Anniversaire</label>
+                                                <input type="radio" name="occasion" id="occ-anniv" value="Anniversaire" required>
+                                                <label for="occ-mar">Mariage</label>
+                                                <input type="radio" name="occasion" id="occ-mar">Mariage
+                                                <label for="occ-fian">Fiançailles</label>
+                                                <input type="radio" name="occasion" id="occ-fian">Fiançailles  <br>
+                                    </fieldset>
+                                    <label for="date">Date de retrait:</label>
+                                    <input type="date" name="date" id="date" required min="2026-09-01"> <br>
+                                    <label for="nombre">Nombre de parts</label>
+                                    <input type="number" name="nombre" id="nombre" > <br>
+                                    <label for="parfums">Parfums souhaités</label>
+                                    <input type="checkbox" name="c" id="c" checked>Chocolat
+                                    <input type="checkbox" name="v" id="v">Vanille
+                                    <input type="checkbox" name="p" id="p">Pistache
+                                    <input type="checkbox" name="fr" id="fr">Fruits rouges <br>
+                                    <label for="niv">Niveau de sucre</label>
+                                    <input type="range" name="niv" id="niv" max="10" min="0" step="1" value="5"> <br>
+                                    <label for="couleur">Couleur du glaçage:</label>
+                                    <input type="color" name="couleur" id="couleur" value="#c8912a"> <br>
+                                    <label for="mes">Messsage sur le gateau</label>
+                                    <input type="text" name="mes" id="mes" maxlength="30"><br>
+                                    <label for="photo">Photo de modèle:</label>
+                                    <input type="file" name="photo" id="photo"> <br>
+
+                        </fieldset>
+                        <fieldset>
+                                    <legend>Confirmation</legend>
+                                    <p>date:09/10/2026
+                                                l'heure:15:42
+                                    </p>
+                        </fieldset>
+                        <p>
+                                    <button type="submit">Envoyer ma commande</button>
+                                    <button type="reset">Tout effacer</button>
+                        </p>
+            </form>
+      </main> 
+      <footer id="contact">Dar El Halwa 2026
+            <ol>
+                  <li>l'adresse:Route de Tunis km 5, Sfax 3044,Tunisie</li>
+                  <li><a href="mailto:contact@darelhalwa.tn">Contactez-nous</a></li>
+                  <li><a href="tel:+21674000000"></a>+216 74 000 000</li>
+            </ol>       
+            <p>Suivez_nous</p> 
+            <a href="https://www.facebook.com/darelhalwa" target="_blank" rel="noopener">Facebook</a> <br>
+            <a href="https://www.instagram.com/darelhalwa" target="_blank" rel="noopener">instagram</a> <br>
+            <a href="https://www.linkedin.com/company/darelhalwa" target="_blank" rel="noopener">Linkedin</a> <br>
+      </footer>
+</body>
+</html>
